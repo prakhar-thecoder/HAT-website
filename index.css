@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+}
+
+body{
+    background-color: #15a3b0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+img{
+    width: 5%;
+    position: absolute;
+    bottom: 0vh;
+    left: 48vw;
+    animation-name: fly;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 3.2s;
+}
+
+#main-container{
+    height: 100vh;
+}
+
+p{
+    margin-top: 30vh;
+    text-align: center;
+    font-size: 350%;
+    color: white;
+    font-weight: bolder;
+    animation-name: expand;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes expand{
+    0%{
+        font-size: 350%;
+        opacity: 100%;
+    }
+    60%{
+        opacity: 100%;
+    }
+    100%{
+        font-size: 500%;
+        opacity: 0%;
+    }
+}
+
+@keyframes expand2{
+    0%{
+        font-size: 400%;
+        opacity: 100%;
+    }
+    60%{
+        opacity: 100%;
+    }
+    100%{
+        font-size: 600%;
+        opacity: 0%;
+    }
+}
+
+
+@keyframes fly{
+    0%{
+        bottom: 0vh;
+        opacity: 100%;
+    }
+    30%{
+        opacity: 100%;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    img{
+        width: 10%;
+    }
+    p{
+        font-size: 400%;
+        animation-name: expand2;
+    }
+    *{
+        font-family: 'Baloo 2', cursive;
+        font-size: 90%;
+    }
+    span{
+        line-height: 100%;
+    }
+}
+
+#name-container, #name-container2{
+    opacity: 0%;
+    animation-name: reveal;
+    animation-duration: 1s;
+    animation-delay: 4.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+span{
+    display: block;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    font-size: 350%;
+    font-weight: 1000;
+}
+
+#span1, #span12{
+    position: relative;
+    right: 100vw;
+    animation-delay: 0s;
+    animation-duration: 1s;
+}
+#span2, #span22{
+    position: relative;
+    left: 100vw;
+    animation-duration: 1s;
+}
+#span3, #span32{
+    position: relative;
+    right: 100vw;
+    animation-duration: 1s;
+}
+
+@keyframes float-right{
+    0%{
+        right: 100vw;
+    }
+    100%{
+        right: 0vw;
+    }
+}
+@keyframes float-left{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: 0vw;
+    }
+}
+
+#span12, #span22, #span32{
+    /* right: 0vw; */
+}
+
+#span22{
+    left: 0vw;
+}
+
+#name-container2{
+    display: none;
+    opacity: 100%;
+}
+
+@keyframes reveal{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
